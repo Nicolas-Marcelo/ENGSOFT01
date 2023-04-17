@@ -9,20 +9,22 @@ int main () {
     double CPF{};
     double data_admissao{};
     int funcionario{};
+    int dias_trabalhados;
 
     double hora_extra;
     double calculo{};
     double bruto;
-    double salario(1212);
-    calculo = (5,50 + 2,25) * hora_extra;
-    bruto = (salario + calculo) / 7,5 ;
+    double salario(1320,00);
+    calculo = 6,00 + (3,00 * hora_extra);
+    bruto_efetivado = (salario + calculo) - ((salario + calculo) / 7,5)) ;
+    bruto_temporario = (salario + (6,00 * dias_trabalhados);
 
     cout << "Bem vindo ao portal do trabalhador!" << endl;
 
     cout << "Digite seu RA: " << endl;
     cin >> RA;
 
-    if (RA == 123456) {
+    if (RA == 22022215275) {
 
         cout << "Vamos efetuar o login: " << endl;
         cout << "Digite seu nome: " << endl;
@@ -46,14 +48,14 @@ int main () {
     cout << "Perfeito!" << endl << endl;
     
     cout << "====================================================================================" << endl;
-    cout << "Agora informe qual o seu status de funcionario dentro da empresa: " << endl;
+    cout << "Para prosseguir com o cadastro, temos algumas informacoes fixas, sendo elas:" << endl;
+    cout << "Salario base atual: 1320,00 reais" << endl << "Valor de contribuicao para o INSS eh de 7,5% do salario base, 99 reais" << endl;
+    cout << "O valor da hora extra eh o valor da hora trabalhada mais metade do valor da hora trabalhada: que seria 9.00 reais!" << endl;
+    cout << "Trabalhador que ganhe acima de dois salarios minimos, 2,640, recebem isencao de imposto de renda!" << endl;
     cout << "====================================================================================" << endl;
-    cout << "Para prosseguir com as informacoes, temos algumas informacoes fixas, sendo elas:" << endl;
-    cout << "Salario base: 1212,00 reais" << endl << "Valor de contribuicao para o INSS: 115,47 reais" << endl;
-    cout << "O valor da hora extra eh o valor da hora trabalhada: eh 7,5 porcento do valor trabalhado!" << endl;
-    cout << "====================================================================================" << endl;
+   
+    cout << "Agora informe qual o seu status de funcionario dentro da empresa: " << endl << endl;
 
-    cout << "" << endl;
     cout << "Digite 1 para funcionario efetivado, 2 para funcionario temporario e 3 para estagiario!" << endl;
     cin >> funcionario;
 
@@ -64,11 +66,11 @@ int main () {
 
             cout << "====================================================================================" << endl;
             cout << "Entao voce eh um funcionario efetivado!" << endl;
-            cout << "Voce fez hora extra no mes desejado? " << endl;
+            cout << "Voce fez alguma hora extra neste mes? Se nao digite  " << endl;
             cin >> hora_extra;
 
-            cout << "Entao o valor do seu salario eh calculado pelo seu salario mais as horas extras realizadas menos 115,47 de INSS!" << endl;
-            cout << "Seu salario eh: " << bruto << " reais!" << endl;
+            cout << "Entao o valor do seu salario eh calculado pelo seu salario mais as horas extras realizadas menos 99 reais de contibuição para o INSS!" << endl;
+            cout << "Seu salario eh: " << bruto_efetivado << " reais!" << endl;
             cout << "====================================================================================" << endl;
 
         case 2 :
@@ -76,10 +78,10 @@ int main () {
             cout << "====================================================================================" << endl;
             cout << "Entao voce eh um funcionario temporario!" << endl;
             cout << "Quantos dias no mes voce trabalho? " << endl;
-            cin >> hora_extra;
+            cin >> dias_trabalhados;
 
             cout << "Entao o valor do seu salario eh calculado pelo seu salario mais quantos dias voce trabalhou menos 115,47 de INSS!" << endl;
-            cout << "Seu salario eh: " << bruto << " reais!" << endl;
+            cout << "Seu salario eh: " << bruto_temporario << " reais!" << endl;
             cout << "====================================================================================" << endl;
 
         case 3 :
